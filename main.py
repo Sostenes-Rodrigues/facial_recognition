@@ -27,7 +27,7 @@ c.execute('''
 conn.commit()
 
 # url da câmera do celular (atualmente usando o do meu celular (ph))
-CAMERA_URL = "http://192.168.18.45:8080/video"
+CAMERA_URL = "http://192.168.18.45:8080/video" # possível integração com o front-end pra configurar melhor isso?
 video_capture = cv2.VideoCapture(CAMERA_URL)
 
 mp_face_detection = mp.solutions.face_detection

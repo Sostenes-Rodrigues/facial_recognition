@@ -1,3 +1,7 @@
+## Projeto
+
+Código base para funcionamento de um sistema de reconhecimento e análise facial
+
 ## Instalação
 
 PYTHON 3.7 OU SUPERIOR NECESSÁRIO

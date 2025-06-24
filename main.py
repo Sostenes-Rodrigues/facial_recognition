@@ -45,7 +45,7 @@ def proximo_indice_pessoa(pasta_pessoa):
             pass
     return max(indices) + 1 if indices else 0
 
-# lista para controlar as pastas das pessoas detectadas (inicialmente separando como "pessoa_1, pessoa_2..." necessário implementação com o front_end pra alterar por pessoa)
+# lista para controlar as pastas das pessoas detectadas (inicialmente separando como "pessoa_1, pessoa_2..." necessário implementação com o front_end pra melhor configuração
 pessoa_atual = 0
 pasta_pessoa_atual = os.path.join(rostos_dir, f'Pessoa_{pessoa_atual}')
 if not os.path.exists(pasta_pessoa_atual):

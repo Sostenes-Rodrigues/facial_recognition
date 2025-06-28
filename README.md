@@ -4,7 +4,7 @@ Código base para funcionamento de um sistema de reconhecimento e análise facia
 
 ## Instalação
 
-PYTHON 3.7 OU SUPERIOR NECESSÁRIO
+CODADO COM PYTHON 3.12.3 ALGUMAS BIBLIOTECAS PODERÃO PRECISAR DE AJUSTE PARA A SUA VERSÃO DO PYTHON
 
 1. Clone ou baixe este repositório.
 2. Navegue até a pasta do projeto no terminal. (Comando cd)

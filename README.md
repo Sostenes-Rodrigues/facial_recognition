@@ -35,6 +35,8 @@ No terminal, dentro da pasta do projeto, rode o main.py
 
 ## Observações
 
+- A instalação das bibliotecas tende a ser demorada por conta do peso das bibliotecas de análise facial
+- A inicialização tende a ter uma pequena demora também, mas nada muito extenso
 - Certifique-se de que o celular e o computador estejam conectados na mesma rede Wi-Fi.
 - Para melhores resultados, utilize boa iluminação.
 

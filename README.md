@@ -13,7 +13,6 @@ CODADO COM PYTHON 3.12.3 ALGUMAS BIBLIOTECAS PODERÃO PRECISAR DE AJUSTE PARA A 
 ```bash
 pip install -r requirements_3.12.txt
 ```
-
 ```bash
 pip install -r requirements_3.10.txt
 ```

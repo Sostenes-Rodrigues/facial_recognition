@@ -8,10 +8,14 @@ CODADO COM PYTHON 3.12.3 ALGUMAS BIBLIOTECAS PODERÃO PRECISAR DE AJUSTE PARA A 
 
 1. Clone ou baixe este repositório.
 2. Navegue até a pasta do projeto no terminal. (Comando cd)
-3. Instale as dependências:
+3. Instale as dependências (`COM BASE NA SUA VERSÃO DO PYTHON`):
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements_3.12.txt
+```
+
+```bash
+pip install -r requirements_3.10.txt
 ```
 
 4. No celular Android, instale e abra o app [IP Webcam](https://play.google.com/store/apps/details?id=com.pas.webcam).

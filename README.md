@@ -4,15 +4,18 @@ Código base para funcionamento de um sistema de reconhecimento e análise facia
 
 ## Instalação
 
-CODADO COM PYTHON 3.12.3 ALGUMAS BIBLIOTECAS PODERÃO PRECISAR DE AJUSTE PARA A SUA VERSÃO DO PYTHON
+**CODADO COM PYTHON 3.12.3 ALGUMAS BIBLIOTECAS PODERÃO PRECISAR DE AJUSTE PARA A SUA VERSÃO DO PYTHON**
 
 1. Clone ou baixe este repositório.
 2. Navegue até a pasta do projeto no terminal. (Comando cd)
-3. Instale as dependências (`COM BASE NA SUA VERSÃO DO PYTHON`):
+3. Instale as dependências (**COM BASE NA SUA VERSÃO DO PYTHON**):
 
 ```bash
 pip install -r requirements_3.12.txt
 ```
+
+ou
+
 ```bash
 pip install -r requirements_3.10.txt
 ```

@@ -4,15 +4,17 @@ Código base para funcionamento de um sistema de reconhecimento e análise facia
 
 ## Instalação
 
-CODADO COM PYTHON 3.12.3 ALGUMAS BIBLIOTECAS PODERÃO PRECISAR DE AJUSTE PARA A SUA VERSÃO DO PYTHON
+**CODADO COM PYTHON 3.12.3 ALGUMAS BIBLIOTECAS PODERÃO PRECISAR DE AJUSTE PARA A SUA VERSÃO DO PYTHON**
 
 1. Clone ou baixe este repositório.
 2. Navegue até a pasta do projeto no terminal. (Comando cd)
-3. Instale as dependências (`COM BASE NA SUA VERSÃO DO PYTHON`):
+3. Instale as dependências (**COM BASE NA SUA VERSÃO DO PYTHON; A instalação das bibliotecas tende a ser demorada por conta do peso das bibliotecas de análise facial**):
 
 ```bash
 pip install -r requirements_3.12.txt
 ```
+
+ou
 
 ```bash
 pip install -r requirements_3.10.txt
@@ -39,7 +41,6 @@ No terminal, dentro da pasta do projeto, rode o main.py
 
 ## Observações
 
-- A instalação das bibliotecas tende a ser demorada por conta do peso das bibliotecas de análise facial
 - A inicialização tende a ter uma pequena demora também, mas nada muito extenso
 - Certifique-se de que o celular e o computador estejam conectados na mesma rede Wi-Fi.
 - Para melhores resultados, utilize boa iluminação.

@@ -1,9 +1,13 @@
+# Importa bibliotecas necessárias para banco de dados e manipulação de arquivos
+
+# Importa a biblioteca sqlite3 para interagir com o banco de dados SQLite (usada nos logs e verificações de usuários)
 import sqlite3
+# Importa a biblioteca OS para manipulação de caminhos de arquivos e diretórios (usada para salvar capturas e organizar pastas)
 import os
 
 def criar_banco_de_dados():
     """
-    Cria todas as 12 tabelas necessárias para o sistema se elas não existirem.
+    Cria as 12 tabelas principais do sistema, caso ainda não existam no banco de dados SQLite.
     """
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     db_path = os.path.join(BASE_DIR, 'database.db')
@@ -12,7 +16,7 @@ def criar_banco_de_dados():
 
     print("[DB SETUP] Verificando e criando tabelas...")
 
-    # 1. Tabela Operadores
+    # 1. Tabela de operadores do sistema (admin, porteiro etc)
     c.execute('''
         CREATE TABLE IF NOT EXISTS Operadores (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -24,7 +28,7 @@ def criar_banco_de_dados():
         )
     ''')
 
-    # 2. Tabela Cursos
+    # 2. Cursos disponíveis
     c.execute('''
         CREATE TABLE IF NOT EXISTS Cursos (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -32,7 +36,7 @@ def criar_banco_de_dados():
         )
     ''')
 
-    # 3. Tabela Turmas
+    # 3. Turmas associadas aos cursos
     c.execute('''
         CREATE TABLE IF NOT EXISTS Turmas (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -44,7 +48,7 @@ def criar_banco_de_dados():
         )
     ''')
 
-    # 4. Tabela Usuarios
+    # 4. Usuários do sistema (alunos, professores, servidores)
     c.execute('''
         CREATE TABLE IF NOT EXISTS Usuarios (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -56,7 +60,7 @@ def criar_banco_de_dados():
         )
     ''')
 
-    # 5. Tabela UsuarioTurma (Associação)
+    # 5. Relaciona usuários com turmas
     c.execute('''
         CREATE TABLE IF NOT EXISTS UsuarioTurma (
             usuario_id INTEGER NOT NULL,
@@ -67,7 +71,7 @@ def criar_banco_de_dados():
         )
     ''')
 
-    # 6. Tabela Visitantes
+    # 6. Visitantes cadastrados no sistema
     c.execute('''
         CREATE TABLE IF NOT EXISTS Visitantes (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -81,7 +85,7 @@ def criar_banco_de_dados():
         )
     ''')
 
-    # 7. Tabela LogsAcesso
+    # 7. Registros de acesso realizados
     c.execute('''
         CREATE TABLE IF NOT EXISTS LogsAcesso (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -95,7 +99,7 @@ def criar_banco_de_dados():
         )
     ''')
 
-    # 8. Tabela AcoesDisciplinares
+    # 8. Registro de ações disciplinares aplicadas
     c.execute('''
         CREATE TABLE IF NOT EXISTS AcoesDisciplinares (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -111,7 +115,7 @@ def criar_banco_de_dados():
         )
     ''')
 
-    # 9. Tabela PermissoesEspeciais
+    # 9. Permissões especiais concedidas
     c.execute('''
         CREATE TABLE IF NOT EXISTS PermissoesEspeciais (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -125,7 +129,7 @@ def criar_banco_de_dados():
         )
     ''')
 
-    # 10. Tabela LiberacoesCOAPAC
+    # 10. Liberações feitas por COAPAC
     c.execute('''
         CREATE TABLE IF NOT EXISTS LiberacoesCOAPAC (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -140,7 +144,7 @@ def criar_banco_de_dados():
         )
     ''')
 
-    # 11. Tabela Anuncios
+    # 11. Tabela para exibição de anúncios
     c.execute('''
         CREATE TABLE IF NOT EXISTS Anuncios (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -156,7 +160,7 @@ def criar_banco_de_dados():
         )
     ''')
 
-    # 12. Tabela Notificacoes
+    # 12. Notificações geradas no sistema
     c.execute('''
         CREATE TABLE IF NOT EXISTS Notificacoes (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -170,7 +174,7 @@ def criar_banco_de_dados():
         )
     ''')
 
+    # Finaliza alterações
     conn.commit()
     conn.close()
     print("[DB SETUP] Configuração do banco de dados concluída.")
-
